@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+*.log
+.env
+.env.local
+.DS_Store
+Thumbs.db
+informer-mcp.json
+.informer-mcp.json
+build/
+*.mcpb

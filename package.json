@@ -1,0 +1,67 @@
+{
+  "name": "informer-mcp",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for the Informer (informer.nl) bookkeeping API",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "informer",
+    "informeronline",
+    "accounting",
+    "boekhouding",
+    "invoices"
+  ],
+  "homepage": "https://github.com/vladxyz/informer-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladxyz/informer-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vladxyz/informer-mcp/issues"
+  },
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "informer-mcp": "dist/index.js"
+  },
+  "main": "dist/lib.js",
+  "types": "dist/lib.d.ts",
+  "files": [
+    "dist",
+    "openapi/api-docs.json",
+    "manifest.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "setup": "node dist/index.js setup",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "tools": "tsx scripts/list-tools.ts",
+    "update-spec": "node scripts/update-spec.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepare": "npm run build",
+    "bundle": "npm run build && node scripts/bundle.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.1.11"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/lib.d.ts",
+      "default": "./dist/lib.js"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "administrations": {
+    "acme": { "label": "ACME BV", "api_key": "acme-key", "security_code": "acme-code", "mode": "read-write" },
+    "bakkerij": { "label": "Bakkerij de Bol", "api_key": "bol-key", "security_code": "bol-code", "mode": "read-only" },
+    "garage": { "label": "Garage Jansen", "api_key": "gar-key", "security_code": "gar-code" }
+  }
+}

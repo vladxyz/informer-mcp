@@ -1,0 +1,71 @@
+{
+  "manifest_version": "0.3",
+  "name": "informer-mcp",
+  "display_name": "Informer",
+  "version": "1.0.0",
+  "description": "Read and write Informer bookkeeping data: relations, invoices, quotations, orders, receipts and reports.",
+  "long_description": "Connects Claude to the Informer (informer.nl) bookkeeping API. Covers relations, sales and purchase invoices, recurring invoices, quotations, sales orders, receipts, products and financial reports.\n\nA bookkeeper can configure several client administrations at once, each with its own credentials and its own read-only or read-write setting; every tool then requires you to say which client it applies to.\n\nCredentials are entered in a local browser page, never in a conversation. Leave the fields below empty and the page opens by itself the first time the server starts.",
+  "author": {
+    "name": "Wlad Larshin",
+    "email": "contact@wladlarshin.nl",
+    "url": "https://github.com/vladxyz"
+  },
+  "homepage": "https://github.com/vladxyz/informer-mcp",
+  "documentation": "https://github.com/vladxyz/informer-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vladxyz/informer-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "informer",
+    "bookkeeping",
+    "boekhouding",
+    "accounting",
+    "invoices",
+    "netherlands"
+  ],
+  "server": {
+    "type": "node",
+    "entry_point": "dist/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/dist/index.js"
+      ],
+      "env": {
+        "INFORMER_API_KEY": "${user_config.api_key}",
+        "INFORMER_SECURITY_CODE": "${user_config.security_code}",
+        "INFORMER_READ_ONLY": "${user_config.read_only}"
+      }
+    }
+  },
+  "user_config": {
+    "api_key": {
+      "type": "string",
+      "title": "API key",
+      "description": "For a single administration, from app.informer.eu/settings/api. Leave empty to fill it in later on the setup page, which is also how you add more than one administration.",
+      "sensitive": true,
+      "required": false
+    },
+    "security_code": {
+      "type": "string",
+      "title": "Security code",
+      "description": "The security code of the same administration, from app.informer.eu/settings/account.",
+      "sensitive": true,
+      "required": false
+    },
+    "read_only": {
+      "type": "boolean",
+      "title": "Read-only",
+      "description": "Hide every tool that creates, changes or deletes anything. Leave off to allow writing.",
+      "default": false,
+      "required": false
+    }
+  },
+  "compatibility": {
+    "runtimes": {
+      "node": ">=20.0.0"
+    }
+  }
+}

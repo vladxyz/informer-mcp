@@ -1,0 +1,6 @@
+{
+  "administrations": {
+    "acme": { "label": "ACME BV", "api_key": "acme-key", "security_code": "acme-code" },
+    "bakkerij": { "label": "Bakkerij de Bol", "apiKey": "bol-key", "securityCode": "bol-code" }
+  }
+}
