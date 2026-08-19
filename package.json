@@ -31,7 +31,8 @@
     "openapi/api-docs.json",
     "manifest.json",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "NOTICE"
   ],
   "engines": {
     "node": ">=20"

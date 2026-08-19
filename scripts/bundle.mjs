@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url';
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const stage = join(root, 'build', 'bundle');
 
-const COPY = ['dist', 'openapi', 'manifest.json', 'README.md', 'LICENSE'];
+const COPY = ['dist', 'openapi', 'manifest.json', 'README.md', 'LICENSE', 'NOTICE'];
 
 function run(command, args, cwd) {
   execFileSync(command, args, { cwd, stdio: 'inherit', shell: process.platform === 'win32' });

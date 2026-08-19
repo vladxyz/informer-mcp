@@ -792,4 +792,11 @@ Arguments are validated against that schema before any HTTP call is made.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE), with one exception.
+
+`openapi/api-docs.json` is Informer's own API description, retrieved unmodified from
+[their published document](https://api.informer.eu/docs/v2/api-docs.json). It is their
+work, carries no licence of its own, and is **not** covered by the MIT License that
+applies to the rest of this repository — a licence only grants what the grantor owns.
+It ships here so the server works offline and its tool surface is reproducible; at
+runtime the server can fetch the current version instead. See [NOTICE](NOTICE).

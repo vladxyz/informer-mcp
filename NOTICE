@@ -1,0 +1,34 @@
+informer-mcp
+Copyright (c) 2026 Wlad Larshin
+
+This product includes software developed by Wlad Larshin, licensed under the MIT
+License. See LICENSE for the full text.
+
+--------------------------------------------------------------------------------
+Third-party material
+--------------------------------------------------------------------------------
+
+openapi/api-docs.json
+
+    The OpenAPI description of the InformerOnline API, retrieved unmodified from
+    the publicly published document at:
+
+        https://api.informer.eu/docs/v2/api-docs.json
+
+    This file is the work of Informer (informer.nl) and remains their property.
+    It carries no licence of its own and is NOT covered by the MIT License that
+    applies to the rest of this repository. It is included so the server works
+    offline and so its generated tool surface is reproducible; at runtime the
+    server can fetch the current version from the URL above instead.
+
+    If you redistribute this repository, or any work derived from it, this file
+    is not yours to relicense. Direct any question about its use to the address
+    Informer gives in the document itself: api@informer.eu
+
+--------------------------------------------------------------------------------
+Trademarks
+--------------------------------------------------------------------------------
+
+"Informer" and "InformerOnline" are names used by Informer. They appear here only
+to describe what this software connects to. This project is not affiliated with,
+endorsed by, or sponsored by Informer.
