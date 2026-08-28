@@ -1,5 +1,7 @@
 # informer-mcp
 
+[![M8ven Live Monitored](https://m8ven.ai/badge/mcp/vladxyz-informer-mcp-ricnir)](https://m8ven.ai/mcp/vladxyz-informer-mcp-ricnir)
+
 A [Model Context Protocol](https://modelcontextprotocol.io) server for the
 [Informer](https://www.informer.nl) bookkeeping API (v2). It gives any MCP client direct
 access to your relations, sales and purchase invoices, quotations, orders, receipts,
